@@ -114,8 +114,8 @@ line: 8, event: error(error1)
 
 To cancel production of sequence elements and free resources immediately, call dispose on the returned subscription.
 
-If a sequence terminates in finite time, not calling dispose or not using disposed(by: disposeBag) won't cause any permanent resource leaks. However, those resources will be used until the sequence completes, either by finishing production of elements or returning an error.
+If a sequence terminates in finite time, not calling dispose or not using `disposed(by: disposeBag)` won't cause any permanent resource leaks. However, those resources will be used until the sequence completes, either by finishing production of elements or returning an error.
 
-If a sequence does not terminate on its own, such as with a series of button taps, resources will be allocated permanently unless dispose is called manually, automatically inside of a disposeBag, with the takeUntil operator, or in some other way.
+If a sequence does not terminate on its own, such as with a series of button taps, resources will be allocated permanently unless dispose is called manually, automatically inside of a disposeBag, with the `takeUntil` operator, or in some other way.
 
 Using dispose bags or takeUntil operator is a robust way of making sure resources are cleaned up. We recommend using them in production even if the sequences will terminate in finite time.
