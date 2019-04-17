@@ -1,4 +1,4 @@
-These a compilation of notes about RxSwift
+This is a compilation of notes about RxSwift
 
 ## Why RxSwift
 * Declarative
